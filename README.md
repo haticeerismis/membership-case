@@ -46,7 +46,7 @@ Bu yapı sayesinde controller’lar sade tutulmuş ve kod okunabilirliği artır
 
 ---
 ## .env dosyasını güncelleyin:
-- - SQL dosyasını içe aktarma: mysql -u root -p membershipcase < sql/membershipCase.sql
+- SQL dosyasını içe aktarma: mysql -u root -p membershipcase < sql/membershipCase.sql
 - DB_DATABASE=membershipcase
 - DB_USERNAME=root
 - DB_PASSWORD=*****
