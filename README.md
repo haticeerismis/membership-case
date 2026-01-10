@@ -44,7 +44,7 @@ Bu dosya Postman’a import edilerek tüm endpoint’ler test edilebilir.
 - DB_PASSWORD=*****
 
 ## Kurulum
-- git clone https://github.com/USERNAME/membership-case.git
+- git clone https://github.com/haticeerismis/membership-case.git
 - cd membership-case
 - composer install
 - cp .env.example .env
