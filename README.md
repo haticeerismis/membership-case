@@ -2,7 +2,7 @@
 
 Laravel 11 kullanılarak geliştirilmiş public bir üyelik API’sidir.
 
-Sistem; firmalar ve bu firmalara bağlı kullanıcıların yönetilmesini sağlar. Case gereği yetkilendirme ve kimlik doğrulama eklenmemiştir.
+Sistem; firmalar ve bu firmalara bağlı kullanıcıların yönetilmesini sağlar. 
 
 ## Özellikler
 - Firma bilgisi ile kullanıcı oluşturma
