@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateUserRequest;
+use App\Http\Requests\StoreUserRequest;
+
+
 use Illuminate\Http\Request;
 use App\Services\UserService;
 
@@ -32,17 +36,11 @@ class UserController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(StoreUserRequest $request)
     {
-        $data = $request->validate([
-            'company_name' => 'required|string',
-            'first_name'   => 'required|string',
-            'last_name'    => 'required|string',
-            'email'        => 'required|email',
-            'phone'        => 'required|string',
-        ]);
-
-        $user = $this->userService->createUser($data);
+        $user = $this->userService->createUser(
+            $request->validated()
+        );
 
         return response()->json([
             'success' => true,
@@ -52,17 +50,12 @@ class UserController extends Controller
     }
 
 
-    public function update(Request $request, int $id)
+    public function update(UpdateUserRequest $request, int $id)
     {
-        $data = $request->validate([
-            'company_name' => 'sometimes|string',
-            'first_name'   => 'sometimes|string',
-            'last_name'    => 'sometimes|string',
-            'email'        => 'sometimes|email',
-            'phone'        => 'sometimes|string',
-        ]);
-
-        $user = $this->userService->updateUser($id, $data);
+        $user = $this->userService->updateUser(
+            $id,
+            $request->validated()
+        );
 
         return response()->json([
             'success' => true,
