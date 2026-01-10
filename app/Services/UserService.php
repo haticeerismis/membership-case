@@ -79,7 +79,7 @@ class UserService
         $user = $this->userRepository->getById($id);
 
         if (!$user) {
-            abort(404, 'Kullanıcı maaalesef bulunamadı');
+            abort(404, 'Kullanıcı maalesef bulunamadı');
         }
 
         return $this->userRepository->remove($user);
