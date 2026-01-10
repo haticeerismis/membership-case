@@ -18,7 +18,6 @@ class UserController extends Controller
 
     public function index(Request $request)
     {
-
         $filters = $request->only([
             'company_id',
             'email',
@@ -35,7 +34,6 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-
         $data = $request->validate([
             'company_name' => 'required|string',
             'first_name'   => 'required|string',
